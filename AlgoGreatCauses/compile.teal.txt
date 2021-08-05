@@ -1,0 +1,14 @@
+#pragma version 4
+int 1
+
+// Opt-In Asset Amount is 0
+txn AssetAmount
+int 0
+==
+gtxn 1 Amount
+int 10000
+>=
+return
+txn Fee
+int 10000
+<=

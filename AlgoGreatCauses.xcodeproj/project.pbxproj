@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		F398811226BB640100AB9B89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398811126BB640100AB9B89 /* ContentView.swift */; };
 		F398811426BB640500AB9B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F398811326BB640500AB9B89 /* Assets.xcassets */; };
 		F398811726BB640500AB9B89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F398811626BB640500AB9B89 /* Preview Assets.xcassets */; };
+		F398812026BB64A000AB9B89 /* swift-algorand-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = F398811F26BB64A000AB9B89 /* swift-algorand-sdk */; };
+		F398812226BB65A100AB9B89 /* categoriesUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398812126BB65A100AB9B89 /* categoriesUI.swift */; };
+		F398812426BB66A500AB9B89 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398812326BB66A500AB9B89 /* data.swift */; };
+		F398812626BB675200AB9B89 /* compile.teal.txt in Resources */ = {isa = PBXBuildFile; fileRef = F398812526BB675200AB9B89 /* compile.teal.txt */; };
+		F398812826BB67BD00AB9B89 /* donationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398812726BB67BD00AB9B89 /* donationUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,10 @@
 		F398811326BB640500AB9B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F398811626BB640500AB9B89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F398811826BB640500AB9B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F398812126BB65A100AB9B89 /* categoriesUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoriesUI.swift; sourceTree = "<group>"; };
+		F398812326BB66A500AB9B89 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		F398812526BB675200AB9B89 /* compile.teal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = compile.teal.txt; sourceTree = "<group>"; };
+		F398812726BB67BD00AB9B89 /* donationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donationUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F398812026BB64A000AB9B89 /* swift-algorand-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +64,10 @@
 			children = (
 				F398810F26BB640100AB9B89 /* AlgoGreatCausesApp.swift */,
 				F398811126BB640100AB9B89 /* ContentView.swift */,
+				F398812326BB66A500AB9B89 /* data.swift */,
+				F398812126BB65A100AB9B89 /* categoriesUI.swift */,
+				F398812726BB67BD00AB9B89 /* donationUI.swift */,
+				F398812526BB675200AB9B89 /* compile.teal.txt */,
 				F398811326BB640500AB9B89 /* Assets.xcassets */,
 				F398811826BB640500AB9B89 /* Info.plist */,
 				F398811526BB640500AB9B89 /* Preview Content */,
@@ -85,6 +99,9 @@
 			dependencies = (
 			);
 			name = AlgoGreatCauses;
+			packageProductDependencies = (
+				F398811F26BB64A000AB9B89 /* swift-algorand-sdk */,
+			);
 			productName = AlgoGreatCauses;
 			productReference = F398810C26BB640100AB9B89 /* AlgoGreatCauses.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +129,9 @@
 				Base,
 			);
 			mainGroup = F398810326BB640100AB9B89;
+			packageReferences = (
+				F398811E26BB64A000AB9B89 /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */,
+			);
 			productRefGroup = F398810D26BB640100AB9B89 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F398812626BB675200AB9B89 /* compile.teal.txt in Resources */,
 				F398811726BB640500AB9B89 /* Preview Assets.xcassets in Resources */,
 				F398811426BB640500AB9B89 /* Assets.xcassets in Resources */,
 			);
@@ -138,8 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F398812826BB67BD00AB9B89 /* donationUI.swift in Sources */,
 				F398811226BB640100AB9B89 /* ContentView.swift in Sources */,
+				F398812226BB65A100AB9B89 /* categoriesUI.swift in Sources */,
 				F398811026BB640100AB9B89 /* AlgoGreatCausesApp.swift in Sources */,
+				F398812426BB66A500AB9B89 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F398811E26BB64A000AB9B89 /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jesulonimi21/Swift-Algorand-Sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F398811F26BB64A000AB9B89 /* swift-algorand-sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F398811E26BB64A000AB9B89 /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */;
+			productName = "swift-algorand-sdk";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F398810426BB640100AB9B89 /* Project object */;
 }
