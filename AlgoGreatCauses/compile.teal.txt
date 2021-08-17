@@ -1,10 +1,13 @@
 #pragma version 4
+// This program clears program state
+//int 1 places the integer 1 on the stack, signaling approval
 int 1
 
 // Opt-In Asset Amount is 0
 txn AssetAmount
 int 0
 ==
+// Check the amount of the spending transaction and verify it is above the minimum giving amount
 gtxn 1 Amount
 int 10000
 >=
