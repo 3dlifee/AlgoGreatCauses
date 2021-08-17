@@ -430,7 +430,7 @@ struct donationUI: View {
                                 if(response.isSuccessful){
                                    
                                     print(response.data!.txId)
-                                    print("foi criado")
+                                    print("Pass")
                                     self.waitForTransaction(txId:response.data!.txId)
                      
                                     
