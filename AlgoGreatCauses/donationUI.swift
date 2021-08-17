@@ -9,7 +9,9 @@ import SwiftUI
 import swift_algorand_sdk
 
 struct donationUI: View {
+    @Environment(\.openURL) var openURL
     // MARK: -  Balance
+    @State var checkTransaction:String = ""
     @State var balanceAfter:String = ""
     @State var balanceBefore:String = ""
     
@@ -211,6 +213,9 @@ struct donationUI: View {
                             Text("Account Balance After Transaction: \(balanceAfter)")
                             Button("Dismiss",
                                    action: {  self.assetRewardState.toggle() })
+                            Button("Check Transaction") {
+                                openURL(URL(string: "https://testnet.algoexplorer.io/address/\(String(checkTransaction))")!)
+                            }
                             
                         } else  if self.transactionIsShowing == false {
                             Image(transactionFailImage)
@@ -257,6 +262,7 @@ struct donationUI: View {
         algodClient.accountInformation(address: account.address.description).execute(){accountInformationResponse in
             if(accountInformationResponse.isSuccessful){
                 print("\(accountInformationResponse.data!.amount!)")
+                checkTransaction = (String(account.address.description))
                 functionToCall("\(accountInformationResponse.data!.amount!)")
             }else{
                 functionToCall("\(String(describing: accountInformationResponse.errorDescription))")
